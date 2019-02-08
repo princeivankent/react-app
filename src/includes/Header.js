@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../logo.svg';
+import '../App.css';
 
 class Header extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">React</NavLink>
+          <NavLink className="navbar-brand" to="/">
+            <img src={logo} className="App-logo d-inline-block align-top" width="30" height="30" alt=""/>
+            React
+          </NavLink>
+
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
