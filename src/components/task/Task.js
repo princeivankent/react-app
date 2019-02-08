@@ -16,23 +16,6 @@ class Task extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  renderItems() {
-    if (this.state.tasks.length === 0) {
-      return <div className="alert alert-danger">
-        <i className="fa fa-exclamation-circle"></i>&nbsp;
-        Sorry!
-      </div>
-    }
-    const tasks = this.state.tasks.map((task, index) => {
-      return <li className="list-group-item" key={index}>
-        <button className="btn btn-sm btn-danger" onClick={this.removeTask.bind(this, index)}><i className="fa fa-times"></i></button>&nbsp;
-          {task.task}
-      </li>
-    });
-
-    return tasks;
-  }
-
   handleChange(e) {
     this.setState({[e.target.name]: e.target.value});
   }
@@ -54,6 +37,13 @@ class Task extends Component {
 
   render() {
     const task = this.state.task;
+    const tasks = this.state.tasks.map((task, index) => {
+      return <li className="list-group-item" key={index}>
+        <button className="btn btn-sm btn-danger" onClick={this.removeTask.bind(this, index)}><i className="fa fa-times"></i></button>&nbsp;
+          {task.task}
+      </li>
+    });
+    
     return (
       <div>
         <div className="row">
@@ -68,7 +58,7 @@ class Task extends Component {
               onKeyPress={this.handleOnClick.bind(this)} />
             </div>
             <ul className="list-group">
-              {this.renderItems()}
+              {tasks}
             </ul>
           </div>
           <div className="col-md-4"></div>

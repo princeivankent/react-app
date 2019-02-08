@@ -19,7 +19,7 @@ class Header extends Component {
                 <NavLink className="nav-link" to="/tasks">Tasks</NavLink>
               </li>
               <li className="nav-item" activeclassname='is-active'>
-                <NavLink className="nav-link" to="/profile/5">Profile</NavLink>
+                <NavLink className="nav-link" to="/profile">Profile</NavLink>
               </li>
             </ul>
           </div>

@@ -8,6 +8,8 @@ import Home from './components/home/Home';
 import Task from './components/task/Task';
 import Profile from './components/profile/Profile';
 
+import ProtectedRoute from './protected.route';
+
 class App extends Component {
   render() {
     return (
@@ -18,11 +20,13 @@ class App extends Component {
           </header>
           <div className="container">
             <Switch>
-              <Route path="/home" component={Home}/>
               <Route path="/tasks" component={Task}/>
-              <Route path="/profile/:profile_id" component={Profile}/>
+              <Route path="/home" component={Home}/>
+              <ProtectedRoute path="/profile" component={Profile}/>
+
+              <Route path='/unauthorized' component={UnknownPage}/>
               <Redirect from='/' exact to='/home'/>
-              <Route component={UnknownPage}/>
+              {/* <Route component={UnknownPage}/> */}
             </Switch>
           </div>
         </div>
