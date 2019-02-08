@@ -11,7 +11,7 @@ import Profile from './components/profile/Profile';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={'/react-app'}>
         <div>
           <header>
             <Header />

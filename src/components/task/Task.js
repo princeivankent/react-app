@@ -19,7 +19,7 @@ class Task extends Component {
   renderItems() {
     if (this.state.tasks.length === 0) {
       return <div className="alert alert-danger">
-        <i className="fa fa-exclamation-circle"></i>&nbsp; 
+        <i className="fa fa-exclamation-circle"></i>&nbsp;
         Sorry!
       </div>
     }
