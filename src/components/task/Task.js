@@ -53,6 +53,7 @@ class Task extends Component {
   }
 
   render() {
+    const task = this.state.task;
     return (
       <div>
         <div className="row">
@@ -62,9 +63,9 @@ class Task extends Component {
               <label><strong>{this.state.task}</strong></label>
               <input type="text" className="form-control" 
               name="task"
-              value={this.state.task}
+              value={task}
               onChange={this.handleChange}
-              onKeyPress={this.handleOnClick.bind(this)}/>
+              onKeyPress={this.handleOnClick.bind(this)} />
             </div>
             <ul className="list-group">
               {this.renderItems()}

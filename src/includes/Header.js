@@ -13,7 +13,7 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item" activeclassname='is-active'>
-                <NavLink className="nav-link" exact={true} to="/">Home <span className="sr-only">(current)</span></NavLink>
+                <NavLink className="nav-link" exact={true} to="/home">Home <span className="sr-only">(current)</span></NavLink>
               </li>
               <li className="nav-item" activeclassname='is-active'>
                 <NavLink className="nav-link" to="/tasks">Tasks</NavLink>

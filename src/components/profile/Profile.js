@@ -4,7 +4,7 @@ class Profile extends Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.match.params.profile_id);
+    console.log(props.match.params.profile_id);
   }
 
   render() {
